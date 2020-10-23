@@ -235,7 +235,7 @@ else:
         if type(s) == bytes:
             return s
         else:
-            r = s.encode('latin-1')
+            r = s.encode('utf-8')
             if len(s) < 2:
                 bc[s] = r
             return r
@@ -253,7 +253,7 @@ def str_(b):
         return b
     else:
         if type(b) == bytes:
-            return b.decode('latin-1')
+            return b.decode('utf-8')
         else:
             return b
 
